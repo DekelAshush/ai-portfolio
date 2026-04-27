@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PlayStre Frontend
 
-## Getting Started
+Frontend for **PlayStre**, a game creation platform built with [Next.js](https://nextjs.org/).
 
-First, run the development server:
+## Backend and AI
+
+PlayStre’s AI and game-creation features are served by a **Flask** application (**Python**). The Flask service integrates the [**OpenRouter**](https://openrouter.ai/) API for model calls. In development, run the Flask server separately and point the frontend at its base URL (see [Environment variables](#environment-variables) below).
+
+## Prerequisites
+
+- Node.js 18+
+- `npm` or `yarn`
+- (Optional for full stack) Python environment for the PlayStre Flask server
+
+## Getting started
+
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### 4. Run the production build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Available scripts
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Script           | Description                                      |
+| ---------------- | ------------------------------------------------ |
+| `npm run dev`    | Start the development server with hot reload     |
+| `npm run build`  | Create an optimized production build             |
+| `npm start`      | Run the production server (run `build` first)   |
+| `npm run lint`   | Run ESLint                                     |
 
-## Deploy on Vercel
+## Tech stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Frontend (this repo)**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+
+**PlayStre stack (with backend)**
+
+- **Python** + **Flask** — game and AI API routes
+- **OpenRouter** — LLM/AI for generation (configured on the server; use `.env` on Flask or proxy from Next)
+
+## Environment variables
+
+Add required variables in **`.env.local`** at the project root (this file is not committed; see Next.js [Environment Variables](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables) docs).
+
+Typical values depend on your Flask setup, for example:
+
+- **`NEXT_PUBLIC_API_BASE_URL`** — Base URL of the Flask server (e.g. `http://127.0.0.1:5000` in development) if the browser calls the API directly.
+- If only the **Flask** server talks to OpenRouter, set **`OPENROUTER_API_KEY`** (or equivalent) in the **Python** environment, not necessarily in the Next app.
+
+Adjust names to match your actual Flask and OpenRouter configuration.
