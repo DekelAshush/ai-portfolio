@@ -18,9 +18,6 @@ export default function Home() {
             Computer Science graduate and AI engineer—full-stack and generative AI
             (LLMs, RAG). Building end-to-end apps with React, Next.js, and FastAPI.
           </p>
-          <p className="mt-3 max-w-2xl text-sm text-zinc-500">
-            Legally authorized to work in the U.S. (J-2, EAD).
-          </p>
         </div>
       </header>
 
