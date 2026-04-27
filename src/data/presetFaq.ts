@@ -52,6 +52,10 @@ export const PRESET_FAQ: PresetFaqItem[] = [
       "The best way to reach Dekel is by email at dekelasis@gmail.com or by sending a LinkedIn message at https://www.linkedin.com/in/dekel-ashush/. A short note with who you are, what you are looking for, and how you would like to connect works well. This assistant cannot schedule meetings or read inboxes for you, but those are the channels Dekel checks for professional outreach.",
     aliases: [
       "contact you",
+      "contact Dekel",
+      "how can I contact Dekel",
+      "get in touch with Dekel",
+      "Dekel email",
       "hire you",
       "collaboration",
       "email",
