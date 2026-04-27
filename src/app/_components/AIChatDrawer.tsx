@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { SUGGESTED_FAQ_QUESTIONS } from "@/data/presetFaq";
 
@@ -17,6 +17,15 @@ export function AIChatDrawer() {
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [requestError, setRequestError] = useState<string | null>(null);
+  const messagesScrollRef = useRef<HTMLDivElement>(null);
+
+  /** Keep the latest question, typing state, and answer in view. */
+  useLayoutEffect(() => {
+    if (!isOpen) return;
+    const el = messagesScrollRef.current;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [isOpen, messages, isTyping]);
 
   const sendMessage = async (raw: string) => {
     const trimmed = raw.trim();
@@ -139,7 +148,10 @@ export function AIChatDrawer() {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-5">
+        <div
+          ref={messagesScrollRef}
+          className="flex-1 overflow-y-auto p-5"
+        >
           {messages.length === 0 && !isTyping ? (
             <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
               <div className="rounded-full border border-zinc-700/50 bg-zinc-800/30 p-4">
