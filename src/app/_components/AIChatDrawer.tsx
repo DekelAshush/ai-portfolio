@@ -1,6 +1,11 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import {
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 import { SUGGESTED_FAQ_QUESTIONS } from "@/data/presetFaq";
 
@@ -9,6 +14,33 @@ interface Message {
   role: "user" | "assistant";
   content: string;
   timestamp: Date;
+}
+
+/** Renders `**bold**` as <strong>; preset FAQ answers use Markdown-style emphasis. */
+function chatBubbleRichText(
+  text: string,
+  strongClassName: string,
+): ReactNode[] {
+  const out: ReactNode[] = [];
+  let rest = text;
+  let key = 0;
+  while (rest.length > 0) {
+    const m = rest.match(/^(.*?)\*\*(.+?)\*\*/);
+    if (m) {
+      const [, before, bold] = m;
+      if (before) out.push(<span key={key++}>{before}</span>);
+      out.push(
+        <strong key={key++} className={strongClassName}>
+          {bold}
+        </strong>,
+      );
+      rest = rest.slice(m[0]!.length);
+    } else {
+      out.push(<span key={key++}>{rest}</span>);
+      break;
+    }
+  }
+  return out;
 }
 
 export function AIChatDrawer() {
@@ -195,7 +227,14 @@ export function AIChatDrawer() {
                         : "bg-zinc-800/80 text-zinc-200"
                     }`}
                   >
-                    <p className="text-sm leading-relaxed">{msg.content}</p>
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                      {chatBubbleRichText(
+                        msg.content,
+                        msg.role === "user"
+                          ? "font-semibold text-emerald-50"
+                          : "font-semibold text-zinc-50",
+                      )}
+                    </p>
                   </div>
                 </div>
               ))}

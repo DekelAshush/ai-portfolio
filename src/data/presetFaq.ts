@@ -1,6 +1,8 @@
 /**
  * Curated FAQ for embedding match + verbatim answers. Safe to import on the
  * client for labels; answers are not secret (same as site copy).
+ *
+ * Order matters for `SUGGESTED_FAQ_QUESTIONS` (chips in the chat empty state).
  */
 export interface PresetFaqItem {
   id: string;
@@ -15,6 +17,61 @@ export interface PresetFaqItem {
 }
 
 export const PRESET_FAQ: PresetFaqItem[] = [
+  {
+    id: "how-to-hire",
+    question: "How can I get in touch about working together?",
+    answer:
+      "The best way to reach Dekel is by email at dekelasis@gmail.com or by sending a LinkedIn message at https://www.linkedin.com/in/dekel-ashush/. A short note with who you are, what you are looking for, and how you would like to connect works well. This assistant cannot schedule meetings or read inboxes for you, but those are the channels Dekel checks for professional outreach.",
+    aliases: [
+      "contact you",
+      "contact Dekel",
+      "how can I contact Dekel",
+      "get in touch with Dekel",
+      "Dekel email",
+      "hire you",
+      "collaboration",
+      "email",
+      "linkedin",
+      "reach out",
+    ],
+  },
+  {
+    id: "what-is-playstre",
+    question: "What is PlayStre?",
+    answer:
+      "PlayStre is a startup building an AI-powered game creation platform: you describe the game you want in natural language, and the product helps turn that into something playable—generated game logic in a safe sandbox, visuals and assets, and the full frontend–backend flow. The idea took shape during Dekel’s **AI Engineer internship** with **Product Manager Accelerator (PMA)**. He continues building PlayStre on the side in his spare time while actively seeking full-time opportunities in full-stack or AI engineering. You can connect with him through the contact options in this portfolio.",
+    aliases: [
+      "PlayStre",
+      "Play Stre",
+      "playstre startup",
+      "what is play stre",
+      "PlayStre company",
+      "PMA internship",
+      "Product Manager Accelerator",
+      "PM Accelerator game startup",
+      "AI game from prompt",
+      "startup that makes games from prompts",
+    ],
+  },
+  {
+    id: "coding-and-fullstack-experience",
+    question:
+      "What’s your experience with coding and full-stack development?",
+    answer:
+      "Dekel has been writing code since high school, starting with hobby projects and self-driven learning. During his B.Sc. in Computer Science, which he completed in August 2025, he worked on coursework and projects in Python and C alongside the broader CS curriculum.\n\nHis main focus on modern full-stack development—React and Next.js frontends, APIs, backend systems, deployments, and AI integrations—grew through his internship experience, including his work on PlayStre, as well as the projects featured in this portfolio. In other words, he brings years of general programming experience, with more concentrated full-stack product-building experience developed through internships and hands-on project work.",
+    aliases: [
+      "coding experience",
+      "programming experience",
+      "how long have you coded",
+      "years of coding",
+      "full stack experience",
+      "fullstack experience",
+      "backend frontend experience",
+      "web development experience",
+      "software experience",
+      "technical background",
+    ],
+  },
   {
     id: "slow-websites",
     question: "Why are some websites slow?",
@@ -43,24 +100,6 @@ export const PRESET_FAQ: PresetFaqItem[] = [
       "demo video vs live",
       "sites not like demo",
       "Why do not all project websites work like the demo video?",
-    ],
-  },
-  {
-    id: "how-to-hire",
-    question: "How can I get in touch about working together?",
-    answer:
-      "The best way to reach Dekel is by email at dekelasis@gmail.com or by sending a LinkedIn message at https://www.linkedin.com/in/dekel-ashush/. A short note with who you are, what you are looking for, and how you would like to connect works well. This assistant cannot schedule meetings or read inboxes for you, but those are the channels Dekel checks for professional outreach.",
-    aliases: [
-      "contact you",
-      "contact Dekel",
-      "how can I contact Dekel",
-      "get in touch with Dekel",
-      "Dekel email",
-      "hire you",
-      "collaboration",
-      "email",
-      "linkedin",
-      "reach out",
     ],
   },
 ];

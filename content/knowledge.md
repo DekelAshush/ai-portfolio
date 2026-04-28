@@ -6,9 +6,15 @@ This site is a personal portfolio for Dekel, a full-stack and AI-focused softwar
 
 **Professional summary:** Dekel is a **Computer Science graduate and AI engineer** with hands-on experience in **full-stack development** and **generative AI** (LLMs, RAG). He is actively seeking a full-stack or AI-focused role building end-to-end applications with **React**, **Next.js**, and **FastAPI**, with a proven track record connecting modern frontends, backend logic, and **MLOps** pipelines. Proficient in **Python**, **Java**, and **SQL**, with strong foundations in system architecture and mathematical analysis. **Legally authorized to work in the U.S.** under **J-2** visa status with an active **Employment Authorization Document (EAD)**—this is factual background for recruiters; the assistant must not give immigration or legal advice beyond what appears here.
 
-**Education:** **B.Sc. in Computer Science** (Cybersecurity specialization) from **The Open University of Israel**, **graduated August 2025** with a **bachelor's degree**.
+**Education and coding history:** Dekel has been **writing code since high school** (early hobby projects and learning). During his **B.Sc. in Computer Science** (Cybersecurity specialization) at **The Open University of Israel**, he completed **coursework and projects in Python and C** as part of the program, alongside other CS topics. He **graduated with a bachelor’s degree in August 2025**.
+
+**Full-stack and shipping focus (timeline):** After graduation (**from August 2025 onward**), he concentrated intensively on **full-stack web development, AI integrations, and shipping real products** (internships, PlayStre, portfolio apps). That post‑grad period is the right baseline when someone asks **how much full‑stack experience he has “since August 2025”** or similar: **use today’s actual calendar date**, compute **elapsed time from late August 2025 to today**, and give a good‑faith answer in **months or ~years**, naming the assumption. **Separately**, mention that **overall programming** goes back to **high school** and that **Python/C university work** is part of his earlier CS path—not the same thing as “years of professional full‑stack web,” unless the user asks for total coding history.
 
 **Work on the site:** Dekel builds web applications and experiments with AI-assisted workflows (Next.js, Python backends, LLM integrations). The projects listed are a mix of production apps, betas, and learning work—each with its own hosting, data layer, and operational constraints.
+
+## PlayStre
+
+**PlayStre** (https://playstre.ai) is a startup building an **AI game-creation platform**: creators describe what they want in a **prompt**, and the stack helps produce **playable games**—sandboxed execution for generated code, visual assets, and the full flow from UI to APIs. The work began during Dekel’s **AI Engineer internship** with **Product Manager Accelerator (PMA)**. Dekel still contributes **on the side in spare time** and is **actively looking for full-time roles** in full-stack or AI engineering (see **Contact**). For **education, coding history, and how long he has focused on full-stack since graduation**, use the **Background** section above—not this PlayStre-only summary.
 
 ## Portfolio demos vs live project sites
 
