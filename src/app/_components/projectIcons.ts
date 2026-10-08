@@ -1,6 +1,7 @@
 import {
   Bot,
   Briefcase,
+  Building2,
   CloudSun,
   Gamepad2,
   ScanFace,
@@ -15,5 +16,6 @@ export const PROJECT_ICONS: Record<ProjectIconId, LucideIcon> = {
   weather: CloudSun,
   faceRecognition: ScanFace,
   soulDigits: Sparkles,
+  moreApartments: Building2,
   roboFriends: Bot,
 };
