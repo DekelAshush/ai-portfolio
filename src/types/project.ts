@@ -4,6 +4,7 @@ export const PROJECT_ICON_IDS = [
   "weather",
   "faceRecognition",
   "soulDigits",
+  "moreApartments",
   "roboFriends",
 ] as const;
 
