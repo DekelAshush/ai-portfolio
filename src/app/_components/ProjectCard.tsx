@@ -53,7 +53,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             src={project.previewImage}
             alt=""
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className="object-contain transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 640px"
           />
         ) : hasVideo && videoPlaybackUrl ? (

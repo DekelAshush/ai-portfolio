@@ -96,8 +96,8 @@ export const projects: Project[] = [
     id: "5",
     title: "SoulDigits",
     description:
-      "This website is a work in progress, being developed to provide personalized numerology insights and consultations. The project involves collaboration with a numerology expert to design intuitive user experiences and clear information flow, highlighting communication and teamwork throughout the process. Once completed, it will allow users to enter their details and receive personalized numerological interpretations. The project also showcases the use of bilingual content (English and Hebrew), reflecting professionalism and mastery of a second language in a real-world web application.",
-    videoSrc: "/project5.mp4",
+      "A live bilingual website for Doris Zadok’s professional numerology practice. Built with Doris to present her services, background, and how to get in touch, in Hebrew and English, with a clear path from the homepage through services, recommendations, and contact.",
+    previewImage: "/projectsVideos/soul-digits.jpg",
     icon: "soulDigits",
     iconImage: "/projectsIcon/numerology.png",
     technologies: [
@@ -109,7 +109,7 @@ export const projects: Project[] = [
       "Express",
       "WhatsApp API",
     ],
-    liveDemoComingSoon: true,
+    projectUrl: "https://www.doris-numerology.co.il",
     githubUrl: "https://github.com/DekelAshush/doris-numerology-website",
   },
   {
